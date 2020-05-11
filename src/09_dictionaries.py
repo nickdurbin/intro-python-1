@@ -51,7 +51,7 @@ print(waypoints)
 
 for place in waypoints:
     if place["name"] == "a place":
-        place.update({ "name": "not a real place", "lon": -130})
+        place.update({ "name": "not a real place", "lon": -130 })
 
 print(waypoints)
 
