@@ -39,14 +39,19 @@ print(date)
 def number_of_args(num):
   return int(sys.argv[num])
 
-if inputLength == 1: # If no input prints the calendar
+# If no input prints the calendar
+if inputLength == 1: 
   date = date
-elif inputLength == 2: # If passed the month prints the calendar for that month and this year.
+# If passed the month prints the calendar for that month and current year.
+elif inputLength == 2: 
   date = datetime(date.year, number_of_args(1), 1)
+# If inputs are valid for month and year
+# Then render the calendar associated with month/year
 elif inputLength == 3:
   date = datetime(number_of_args(1), number_of_args(2), 1)
+# Render this statement as a catch
 else:
-  print("Please enter month and year in the following format: `py -m 14_cal [month e.g. 1-12] [year e.g 1900]`")
+  print("Please enter year and month in the following format: `py -m 14_cal [year e.g 1900] [month e.g 1-12]`")
   sys.exit()
 
 print(calendar.month(date.year, date.month))
