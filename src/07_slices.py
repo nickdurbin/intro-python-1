@@ -32,6 +32,7 @@ print(a[1:])
 print(a[slice(1, None)])
 
 # Output every element except the last one: [2, 4, 1, 7, 9]
+print(a[:-1])
 print(a[:5])
 print(a[slice(None, 5)])
 
